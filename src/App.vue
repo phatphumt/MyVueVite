@@ -1,12 +1,28 @@
+<script lang="ts" setup>
+
+</script>
+
 <template>
-  <nav class="text-center py-2 text-blue-800">
-    <router-link to="/">Home</router-link> <span class="font-bold text-black"> | </span> <router-link
-      to="/about">About</router-link>
-    <span class="font-bold text-black"> | </span>
-    <router-link to="/contact">Contact</router-link>
-  </nav>
-  <main>
-    <router-view />
-  </main>
+  <!-- TODO: Add a icon when on a small screen (640px) -->
+
+  <body class="bg-gradient-to-br from-indigo-50 to-sky-50 h-screen">
+    <nav>
+      <div class="bg-gradient-to-r from-slate-500 to-slate-800 flex justify-evenly py-3">
+        <router-link to="/">
+          <h1 class="text-white text-2xl font-bold">Phatphum</h1>
+        </router-link>
+        <div class="flex justify-evenly items-center gap-10 invisible sm:visible">
+          <router-link to="/about"><span
+              class="text-white font-semibold px-3 py-2 rounded-lg hover:bg-slate-800">About</span></router-link>
+          <router-link to="/contact"><span class="text-white font-semibold px-3 py-2 rounded-lg hover:bg-slate-800">My
+              Work</span></router-link>
+        </div>
+      </div>
+    </nav>
+    <main class="pt-10">
+      <router-view />
+    </main>
+  </body>
 </template>
 
+<style lang="css" scoped></style>
